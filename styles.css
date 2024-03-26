@@ -1,0 +1,115 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #111;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative; 
+}
+header, footer {
+    background-color: #ffffff; 
+    padding: 0px;
+    text-align: center;
+}
+.container {
+    text-align: left;
+    width: 720px;
+    margin: 0 auto;
+    margin-bottom: 0px;
+}
+.nav {
+    background-color: #ffffff;
+    padding: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+.summary {
+    background-color: #ffffff;
+    padding: 12px;
+    text-align: center;
+}
+.content {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    display: flex;
+    width: 480;
+    justify-content: center;
+}
+.content table {
+    width: 100%;
+    table-layout: fixed; /* Set the table layout to fixed */
+    border-collapse: collapse; /* Collapse the borders */
+}
+.content th,
+.content td {
+    padding: 12px; /* Add padding to table cells */
+    text-align: left; /* Left-align the content */
+    border: none; /* Remove borders */
+}
+.content th:nth-child(1) {
+    width: 55%; /* Set the width of the first column */
+}
+.content th:nth-child(2) {
+    width: 15%; /* Set the width of the second column */
+}
+.content th:nth-child(3) {
+    width: 30%; /* Set the width of the second column */
+}
+.content td a {
+    font-weight: bold; /* Make the text bold */
+    text-decoration: none; /* Remove the default underline */
+    color: inherit; /* Inherit the color from the parent */
+}
+.content td a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+.content td.library_column {
+    font-size: 12px;
+}
+.content h2 {
+    text-align: left;
+}
+.links-list a {
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+.links-list a:hover {
+    text-decoration: underline;
+}
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+.nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+.nav-right {
+    position: absolute;
+    top: 336px;
+    right: 50px;
+    transform: translateY(-50%);
+    text-align: left;
+}
+.tags-list {
+    list-style: none;
+    padding: 0;
+}
+.tags-list li {
+    margin-bottom: 10px;
+}
+.tags-list li a {
+    text-decoration: none;
+    color: #333;
+}
+.tags-list li a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Weatherstone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <h1><br>David Weatherstone</h1>
+    </header>
+    <div class="container">
+        <div class="nav">
+            <ul>
+                <!-- <li><a href="#">Home</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Articles</a></li> -->
+            </ul>
+        </div>
+        <div class="summary">
+            <p>This content is mostly just me playing around with features of different 
+                data-focused Python libraries. Posts will be mostly Juypter notebooks.<br><br></p>
+        </div>
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Content</th>
+                        <th>Date</th>
+                        <th>Libraries</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-tags="polars,hvplot">
+                        <td><a href="./Content/004_OWID_Surface_Temperature_Anomalies.html", title="polars, hvplot">004 OWID Surface Temperature Anomalies</a></td>
+                        <td>2024-03-25</td>
+                        <td class="library_column">Polars, HvPlot</td>
+                    </tr>
+                    <tr data-tags="great_tables,pandas">
+                        <td><a href="./Content/003_London_Weather_Nanoplots.html", title="pandas, great_tables">003 London Weather Nanoplots</a></td>
+                        <td>2024-03-20</td>
+                        <td class="library_column">Great Tables, Pandas</td>
+                    </tr>
+                    <tr data-tags="great_tables,polars">
+                        <td><a href="./Content/002_London_Weather.html", title="great_tables, polars">002 London Weather</a></td>
+                        <td>2024-02-18</td>
+                        <td class="library_column">Polars, Great Tables</td>
+                    </tr>
+                    <tr data-tags="great_tables,matplotlib,pandas">
+                        <td><a href="./Content/001_House_Prices_Darlington.html", title="pandas, matplotlib, great_tables">001 House Prices Darlington</a></td>
+                        <td>2024-02-11</td>
+                        <td class="library_column">Pandas, Matplotlib, Great Tables</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>        
+    <div class="nav-right">
+        <h2>Tags</h2>
+        <ul class="tags-list">
+            <li><a href="#" data-filter="pandas">Pandas</a></li>
+            <li><a href="#" data-filter="matplotlib">Matplotlib</a></li>
+            <li><a href="#" data-filter="polars">Polars</a></li>
+            <li><a href="#" data-filter="great_tables">Great Tables</a></li>
+            <li><a href="#" data-filter="hvplot">HvPlot</a></li>
+            <li><button id="clear-filter-btn">Clear Filter</button></li>
+        </ul>
+    </div>
+    <footer>
+        <!-- <p>Footer Content</p> -->
+    </footer>
+    <script>
+        document.querySelectorAll('.tags-list a').forEach(tag => {
+            tag.addEventListener('click', function(event) {
+                event.preventDefault();
+                const filter = this.getAttribute('data-filter');
+                filterTable(filter);
+            });
+        });
+    
+        document.getElementById('clear-filter-btn').addEventListener('click', function() {
+            filterTable('all');
+        });
+    
+        function filterTable(filter) {
+            document.querySelectorAll('.content tbody tr').forEach(row => {
+                const tags = row.getAttribute('data-tags').split(',');
+                if (filter === 'all' || tags.includes(filter)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
