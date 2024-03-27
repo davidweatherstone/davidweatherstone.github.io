@@ -22,10 +22,14 @@ header, footer {
     padding: 0px;
     margin-bottom: 0px;
     text-align: center;
+    font-weight: normal;
+}
+.nav a:hover {
+    font-weight: bold;
 }
 .summary {
     background-color: #ffffff;
-    padding: 12px;
+    padding: 6px;
     text-align: center;
 }
 .content {
@@ -68,33 +72,9 @@ header, footer {
 .content td.library_column {
     font-size: 12px;
 }
-.content h2 {
-    text-align: left;
-}
-.links-list a {
-    font-weight: bold;
-    color: #000;
-    text-decoration: none;
-}
-.links-list a:hover {
-    text-decoration: underline;
-}
-.nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-.nav ul li {
-    display: inline-block;
-    margin-right: 10px;
-}
-.nav ul li a {
-    text-decoration: none;
-    color: #333;
-}
 .nav-right {
     position: absolute;
-    top: 336px;
+    top: 328px;
     right: 50px;
     transform: translateY(-50%);
     text-align: left;
